@@ -12,7 +12,6 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         
         setUpUI()
@@ -39,14 +38,12 @@ extension HomeViewController {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: btn)
         
-        
         //  设置右侧item
         let historyBtn = UIButton.init()
         historyBtn.setImage(UIImage.init(named: "image_my_history"), for: .normal)
         historyBtn.setImage(UIImage.init(named: "Image_my_history_click"), for: .highlighted)
         historyBtn.sizeToFit()
         let historyItem = UIBarButtonItem.init(customView: historyBtn)
-        
         
         let searchBtn = UIButton.init()
         searchBtn.setImage(UIImage.init(named: "btn_search"), for: .normal)

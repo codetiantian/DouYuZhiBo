@@ -39,25 +39,15 @@ extension HomeViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: btn)
         
         //  设置右侧item
-        let historyBtn = UIButton.init()
-        historyBtn.setImage(UIImage.init(named: "image_my_history"), for: .normal)
-        historyBtn.setImage(UIImage.init(named: "Image_my_history_click"), for: .highlighted)
-        historyBtn.sizeToFit()
-        let historyItem = UIBarButtonItem.init(customView: historyBtn)
+        let size = CGSize.init(width: 35, height: 35)
+        //  1.历史
+        let historyItem = UIBarButtonItem.createItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size)
+        //  2.搜索
+        let searchItem = UIBarButtonItem.createItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
+        //  3.二维码
+        let qrcodeItem = UIBarButtonItem.createItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
         
-        let searchBtn = UIButton.init()
-        searchBtn.setImage(UIImage.init(named: "btn_search"), for: .normal)
-        searchBtn.setImage(UIImage.init(named: "btn_search_clicked"), for: .highlighted)
-        searchBtn.sizeToFit()
-        let searchItem = UIBarButtonItem.init(customView: searchBtn)
-        
-        let QRCodeBtn = UIButton.init()
-        QRCodeBtn.setImage(UIImage.init(named: "Image_scan"), for: .normal)
-        QRCodeBtn.setImage(UIImage.init(named: "Image_scan_click"), for: .highlighted)
-        QRCodeBtn.sizeToFit()
-        let QRCodeItem = UIBarButtonItem.init(customView: QRCodeBtn)
-        
-        navigationItem.rightBarButtonItems = [historyItem, searchItem, QRCodeItem]
+        navigationItem.rightBarButtonItems = [historyItem, searchItem, qrcodeItem]
     }
     
     

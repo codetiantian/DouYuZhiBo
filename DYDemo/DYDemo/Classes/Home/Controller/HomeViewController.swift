@@ -32,20 +32,18 @@ extension HomeViewController {
     func setUpNavigationBar() {
         
         //  设置左侧item
-        let btn = UIButton.init()
-        btn.setImage(UIImage.init(named: "logo"), for: .normal)
-        btn.sizeToFit()
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: btn)
+        navigationItem.leftBarButtonItem = UIBarButtonItem.init(imageName: "logo")
         
         //  设置右侧item
         let size = CGSize.init(width: 35, height: 35)
         //  1.历史
-        let historyItem = UIBarButtonItem.createItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size)
+        let historyItem = UIBarButtonItem.init(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size)
+        
         //  2.搜索
-        let searchItem = UIBarButtonItem.createItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
+        let searchItem = UIBarButtonItem.init(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
+        
         //  3.二维码
-        let qrcodeItem = UIBarButtonItem.createItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
+        let qrcodeItem = UIBarButtonItem.init(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
         
         navigationItem.rightBarButtonItems = [historyItem, searchItem, qrcodeItem]
     }

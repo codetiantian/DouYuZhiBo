@@ -1,8 +1,8 @@
 //
-//  UIBarButton-Extention.swift
+//  UIBarButtonItem-Extension.swift
 //  DYDemo
 //
-//  Created by 这个夏天有点冷 on 2017/3/7.
+//  Created by 这个夏天有点冷 on 2017/3/8.
 //  Copyright © 2017年 YLT. All rights reserved.
 //
 
@@ -18,4 +18,6 @@ extension UIBarButtonItem {
         
         return UIBarButtonItem.init(customView: btn)
     }
+    
+    
 }

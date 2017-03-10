@@ -8,12 +8,20 @@
 
 import UIKit
 
+protocol PageTitleViewDelegate : class {        //  后跟class，表示只能被类遵守
+    func pageTitleView(titleView : PageTitleView, selectedIndex index : Int)
+}
+
 private let kScrollLineH : CGFloat = 2
 
 class PageTitleView: UIView {
 
     // MARK:定义属性
+    var currentIndex : Int = 0
     var titles : [String]
+    
+    //  定义代理
+    weak var delegate : PageTitleViewDelegate?
     
     //  MARK: 懒加载属性
     lazy var titleLabels : [UILabel] = [UILabel]()
@@ -89,8 +97,12 @@ extension PageTitleView {
             
             //  将label添加到scrollView中
             scrollView.addSubview(label)
-            
             titleLabels.append(label)
+            
+            //  给label添加手势
+            label.isUserInteractionEnabled = true
+            let tapGes = UITapGestureRecognizer.init(target: self, action: #selector(self.titleLabelClicked(tapGes:)))
+            label.addGestureRecognizer(tapGes)
         }
     }
     
@@ -110,5 +122,33 @@ extension PageTitleView {
         scrollView.addSubview(scrollLine)
         scrollLine.frame = CGRect.init(x: firstLabel.frame.origin.x, y: frame.height - kScrollLineH, width: firstLabel.frame.size.width, height: kScrollLineH)
     }
-    
+}
+
+//  MARK: 监听label的点击
+extension PageTitleView {
+    //  如果是事件监听，需要用到@objc
+    @objc func titleLabelClicked(tapGes : UITapGestureRecognizer) {
+        //  1.获取当前label的下标值
+        guard let currentLabel = tapGes.view as? UILabel else { return }
+        
+        //  2.获取之前的label
+        let oldLabel = titleLabels[currentIndex]
+        
+        //  3.切换文字的颜色
+        currentLabel.textColor = UIColor.orange
+        oldLabel.textColor = UIColor.darkGray
+        
+        //  4.保存最新label的下标志
+        currentIndex = currentLabel.tag
+        
+        //  5.滚动条位置发生改变
+        let scrollLineX = CGFloat(currentLabel.tag) * scrollLine.frame.width
+        
+        UIView.animate(withDuration: 0.15) { 
+            self.scrollLine.frame.origin.x = scrollLineX
+        }
+        
+        //  6.通知代理做事情
+        delegate?.pageTitleView(titleView: self, selectedIndex: currentIndex)
+    }
 }

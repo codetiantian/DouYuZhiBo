@@ -23,6 +23,7 @@
 		827998751E69619B00EB55C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827998731E69619B00EB55C6 /* LaunchScreen.storyboard */; };
 		827998801E69619B00EB55C6 /* DYDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8279987F1E69619B00EB55C6 /* DYDemoTests.swift */; };
 		8279988B1E69619B00EB55C6 /* DYDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8279988A1E69619B00EB55C6 /* DYDemoUITests.swift */; };
+		82D1C0D51E76A81F00218D0A /* ReCommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D1C0D41E76A81F00218D0A /* ReCommendViewController.swift */; };
 		82FF86E51E71680100B4082A /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FF86E41E71680100B4082A /* PageContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		827998861E69619B00EB55C6 /* DYDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DYDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8279988A1E69619B00EB55C6 /* DYDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYDemoUITests.swift; sourceTree = "<group>"; };
 		8279988C1E69619B00EB55C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82D1C0D41E76A81F00218D0A /* ReCommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReCommendViewController.swift; sourceTree = "<group>"; };
 		82FF86E41E71680100B4082A /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +176,7 @@
 			children = (
 				825AD53D1E6BE03D009554C9 /* Home.storyboard */,
 				825AD5531E6C0978009554C9 /* HomeViewController.swift */,
+				82D1C0D41E76A81F00218D0A /* ReCommendViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 			files = (
 				825AD5521E6C092D009554C9 /* MainViewController.swift in Sources */,
 				822BFC7F1E716AF700E8C3B0 /* UIColor-Extension.swift in Sources */,
+				82D1C0D51E76A81F00218D0A /* ReCommendViewController.swift in Sources */,
 				8279986B1E69619B00EB55C6 /* AppDelegate.swift in Sources */,
 				822D071C1E703481002FDFE0 /* PageTitleView.swift in Sources */,
 				82FF86E51E71680100B4082A /* PageContentView.swift in Sources */,

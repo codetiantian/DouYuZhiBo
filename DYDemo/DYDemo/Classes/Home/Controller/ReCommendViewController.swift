@@ -10,7 +10,7 @@ import UIKit
 
 private let kItemMargin : CGFloat = 10
 private let kItemW = (kScreenW - 3 * kItemMargin) / 2
-private let kItemH = kScreenW * 3 / 4
+private let kItemH = kItemW * 3 / 4
 private let kHeaderViewH : CGFloat = 50
 
 private let kNormalCellID = "kNormalCellID"
@@ -30,14 +30,14 @@ class ReCommendViewController: UIViewController {
         
         // 2.创建UICollectionView
         let collectionView = UICollectionView.init(frame: self.view.bounds, collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor.blue
+        collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         //  注册cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
+        collectionView.register(UINib.init(nibName: "CollectionViewNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
         //  注册header
-        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kNormalHeaderViewID)
+        collectionView.register(UINib.init(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kNormalHeaderViewID)
         
         return collectionView
     }()
@@ -50,8 +50,6 @@ class ReCommendViewController: UIViewController {
         view.backgroundColor = UIColor.purple
         
         setupUI()
-        
-        
     }
 
 }
@@ -81,7 +79,6 @@ extension ReCommendViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //  获取cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
-        cell.backgroundColor = UIColor.red
         
         return cell
     }
@@ -89,7 +86,6 @@ extension ReCommendViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         //  1.取出section的headerView
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kNormalHeaderViewID, for: indexPath)
-        headerView.backgroundColor = UIColor.green
         
         return headerView
     }

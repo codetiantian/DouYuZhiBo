@@ -44,8 +44,6 @@ class ReCommendViewController: UIViewController {
         //  注册header
         collectionView.register(UINib.init(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kNormalHeaderViewID)
         
-        
-        
         return collectionView
     }()
     

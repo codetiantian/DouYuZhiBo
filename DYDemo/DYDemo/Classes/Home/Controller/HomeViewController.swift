@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 private let kTitleViewH : CGFloat = 40
 

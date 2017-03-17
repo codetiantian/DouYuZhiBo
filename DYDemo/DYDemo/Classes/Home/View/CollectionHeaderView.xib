@@ -4,14 +4,13 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kNormalHeaderViewID" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kNormalHeaderViewID" id="U6b-Vx-4bR" customClass="CollectionHeaderView" customModule="DYDemo" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -58,6 +57,10 @@
                 <constraint firstItem="cPp-1K-T9p" firstAttribute="leading" secondItem="U8I-sY-fP7" secondAttribute="trailing" constant="5" id="ia0-kE-oWS"/>
                 <constraint firstAttribute="bottom" secondItem="G5N-5T-MQy" secondAttribute="bottom" constant="5" id="rI7-Iq-qOk"/>
             </constraints>
+            <connections>
+                <outlet property="iconImageView" destination="U8I-sY-fP7" id="pJI-VP-W8g"/>
+                <outlet property="titleLabel" destination="cPp-1K-T9p" id="lWw-IV-nsq"/>
+            </connections>
             <point key="canvasLocation" x="25" y="0.0"/>
         </collectionReusableView>
     </objects>

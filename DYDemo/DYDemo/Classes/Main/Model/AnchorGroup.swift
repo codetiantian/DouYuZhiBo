@@ -11,7 +11,7 @@ import UIKit
 class AnchorGroup: NSObject {
     /// 该组中对应的房间信息
     var room_list : [[String : NSObject]]? {
-        didSet{
+        didSet{     //  需要查看了解
             guard let room_list = room_list else { return }
             for dict in room_list {
                 anchors.append(AnchorModel.init(dic: dict))

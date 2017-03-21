@@ -32,6 +32,7 @@ class AnchorGroup: NSObject {
     override init() {
     }
     
+    //  MARK:- 重载
     init(dict : [String : NSObject]) {
         super.init()
         

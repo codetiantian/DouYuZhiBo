@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -70,6 +69,12 @@
                 <constraint firstItem="DUZ-ZJ-8uE" firstAttribute="top" secondItem="kYR-Ye-xKj" secondAttribute="bottom" constant="5" id="yy9-04-CbB"/>
             </constraints>
             <size key="customSize" width="190" height="140"/>
+            <connections>
+                <outlet property="iconImageView" destination="kYR-Ye-xKj" id="Jj0-e8-Yu8"/>
+                <outlet property="nickNameLabel" destination="nYb-nS-mlj" id="AxW-0I-yyl"/>
+                <outlet property="onlineButton" destination="6Qt-Fu-f7B" id="Gz5-2P-LtF"/>
+                <outlet property="roomNameLabel" destination="ZnJ-m3-gDD" id="YgL-9R-JMr"/>
+            </connections>
             <point key="canvasLocation" x="-22.5" y="-54"/>
         </collectionViewCell>
     </objects>

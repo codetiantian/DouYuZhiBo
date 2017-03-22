@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4DC3805ECBA8D25CCF1DABE8 /* Pods_DYDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9A4BF525065D8B1185E2C2 /* Pods_DYDemoTests.framework */; };
+		8205F55B1E8291870057BB17 /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8205F55A1E8291870057BB17 /* CollectionBaseCell.swift */; };
 		822BFC7F1E716AF700E8C3B0 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822BFC7E1E716AF700E8C3B0 /* UIColor-Extension.swift */; };
 		822D071A1E702C6B002FDFE0 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822D07191E702C6B002FDFE0 /* UIBarButtonItem-Extension.swift */; };
 		822D071C1E703481002FDFE0 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822D071B1E703481002FDFE0 /* PageTitleView.swift */; };
@@ -66,6 +67,7 @@
 		5C6347629C586C993024C0BB /* Pods-DYDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYDemo/Pods-DYDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		6D74C67D32AA1C1726859CD8 /* Pods-DYDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYDemoUITests/Pods-DYDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E9A4BF525065D8B1185E2C2 /* Pods_DYDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8205F55A1E8291870057BB17 /* CollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		822BFC7E1E716AF700E8C3B0 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		822D07191E702C6B002FDFE0 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		822D071B1E703481002FDFE0 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				826D750B1E77FCA40092DC1A /* CollectionViewNormalCell.xib */,
 				826D750E1E7801350092DC1A /* CollectionPrettyCell.swift */,
 				826D750F1E7801350092DC1A /* CollectionPrettyCell.xib */,
+				8205F55A1E8291870057BB17 /* CollectionBaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				822D071C1E703481002FDFE0 /* PageTitleView.swift in Sources */,
 				82FF86E51E71680100B4082A /* PageContentView.swift in Sources */,
 				8248F49E1E7BB0EA00091C4B /* NSDate-Extension.swift in Sources */,
+				8205F55B1E8291870057BB17 /* CollectionBaseCell.swift in Sources */,
 				822D071A1E702C6B002FDFE0 /* UIBarButtonItem-Extension.swift in Sources */,
 				826D75101E7801350092DC1A /* CollectionPrettyCell.swift in Sources */,
 				822D071E1E703742002FDFE0 /* Common.swift in Sources */,

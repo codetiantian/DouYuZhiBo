@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="204" height="223"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7b-hj-BxM">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7b-hj-BxM">
                         <rect key="frame" x="0.0" y="199" width="46" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="FSP-1X-MxF"/>
@@ -46,23 +45,24 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="666在线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSL-4u-UtX">
-                        <rect key="frame" x="139" y="5" width="60" height="20"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waO-vD-bLi">
+                        <rect key="frame" x="136" y="8" width="60" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="arM-Ru-ab5"/>
-                            <constraint firstAttribute="width" constant="60" id="mhc-Wf-DIT"/>
+                            <constraint firstAttribute="width" constant="60" id="NrZ-hq-V43"/>
+                            <constraint firstAttribute="height" constant="20" id="xcK-IL-S4F"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
+                        <state key="normal" title="6666在线">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="3"/>
+                                <integer key="value" value="5"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
-                    </label>
+                    </button>
                 </subviews>
             </view>
             <constraints>
@@ -70,15 +70,21 @@
                 <constraint firstItem="o7b-hj-BxM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0zh-ZU-j56"/>
                 <constraint firstAttribute="trailing" secondItem="FHB-VM-mTV" secondAttribute="trailing" constant="5" id="6uV-uf-Je5"/>
                 <constraint firstAttribute="trailing" secondItem="FPw-M0-EbO" secondAttribute="trailing" id="9rh-IS-IEq"/>
-                <constraint firstAttribute="trailing" secondItem="oSL-4u-UtX" secondAttribute="trailing" constant="5" id="RO9-Dy-fJK"/>
+                <constraint firstAttribute="trailing" secondItem="waO-vD-bLi" secondAttribute="trailing" constant="8" id="Rfy-9n-L1Q"/>
                 <constraint firstItem="FHB-VM-mTV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="V7j-CM-i28"/>
                 <constraint firstItem="FPw-M0-EbO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XME-tN-bpB"/>
                 <constraint firstItem="o7b-hj-BxM" firstAttribute="top" secondItem="FHB-VM-mTV" secondAttribute="bottom" constant="5" id="dLF-qg-2xl"/>
                 <constraint firstAttribute="bottom" secondItem="o7b-hj-BxM" secondAttribute="bottom" constant="10" id="e7o-eR-2gm"/>
                 <constraint firstItem="FHB-VM-mTV" firstAttribute="top" secondItem="FPw-M0-EbO" secondAttribute="bottom" constant="5" id="l2I-k4-ef9"/>
-                <constraint firstItem="oSL-4u-UtX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="qDb-rF-qjU"/>
+                <constraint firstItem="waO-vD-bLi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="u72-DJ-yMw"/>
             </constraints>
             <size key="customSize" width="204" height="223"/>
+            <connections>
+                <outlet property="cityBtn" destination="o7b-hj-BxM" id="UTl-qa-JAp"/>
+                <outlet property="iconImageView" destination="FPw-M0-EbO" id="R1E-lS-mli"/>
+                <outlet property="nickNameLabel" destination="FHB-VM-mTV" id="CLV-a5-pEH"/>
+                <outlet property="onlineButton" destination="waO-vD-bLi" id="2bQ-Oe-uhH"/>
+            </connections>
             <point key="canvasLocation" x="3" y="-4.5"/>
         </collectionViewCell>
     </objects>

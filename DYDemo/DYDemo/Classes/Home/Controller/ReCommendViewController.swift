@@ -81,8 +81,14 @@ extension ReCommendViewController {
 //  MARK:- 请求数据
 extension ReCommendViewController {
     func loadData() {
+        //  1.请求推荐数据
         self.recommendVM.requestrData { 
             self.collectionView.reloadData()
+        }
+        
+        //  2.请求轮播数据
+        recommendVM.requestrData { 
+            self.cycleView.cycleModels = self.recommendVM.cycleModels
         }
     }
 }

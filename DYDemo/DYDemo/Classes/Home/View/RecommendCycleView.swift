@@ -12,6 +12,8 @@ private let kCycleCellID = "kCycleCellID"
 
 class RecommendCycleView: UIView {
     
+    var cycleTimer : Timer?
+    
     //  定义属性
     var cycleModels : [CycleModel]? {
         didSet {
@@ -20,9 +22,15 @@ class RecommendCycleView: UIView {
             
             //  设置pageControl个数
             pageControl.numberOfPages = cycleModels?.count ?? 0
+            
+            let indexPath = IndexPath.init(item: (cycleModels?.count ?? 0) * 10, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
+            
+            //  添加定时器
+            removeCycleTimer()
+            addCycleTimer()
         }
     }
-    
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -32,7 +40,7 @@ class RecommendCycleView: UIView {
         autoresizingMask = UIViewAutoresizing()
         
         //  注册cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier:kCycleCellID)
+        collectionView.register(UINib.init(nibName: "CollectionCycleCell", bundle: nil), forCellWithReuseIdentifier:kCycleCellID)
     }
     
     override func layoutSubviews() {
@@ -58,16 +66,51 @@ extension RecommendCycleView {
 //  MARK:- 遵守UICollectionView的数据源协议
 extension RecommendCycleView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cycleModels?.count ?? 0
+        return (cycleModels?.count ?? 0) * 10000
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath) as! CollectionCycleCell
         
-        let cycleModel = cycleModels![indexPath.item]
-         
-        
+        cell.cycleModel = cycleModels![indexPath.item % cycleModels!.count]
         
         return cell
     }
 }
+
+extension RecommendCycleView : UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let offsetX = scrollView.contentOffset.x
+        
+        pageControl.currentPage = Int(offsetX / scrollView.bounds.width) % (cycleModels?.count ?? 1)
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        removeCycleTimer()
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        addCycleTimer()
+    }
+}
+
+//  MARK:- 对定时器的操作方法
+extension RecommendCycleView {
+    func addCycleTimer() {
+        cycleTimer = Timer.init(timeInterval: 3.0, target: self, selector: #selector(scrollToNext), userInfo: nil, repeats: true)
+        RunLoop.main.add(cycleTimer!, forMode: .commonModes)
+    }
+    
+    func removeCycleTimer() {
+        cycleTimer?.invalidate()
+        cycleTimer = nil
+    }
+    
+    @objc func scrollToNext() {
+        let currentOffset = collectionView.contentOffset.x
+        let offset = currentOffset + collectionView.bounds.width
+        collectionView.setContentOffset(CGPoint.init(x: offset, y: 0), animated: true)
+    }
+}
+

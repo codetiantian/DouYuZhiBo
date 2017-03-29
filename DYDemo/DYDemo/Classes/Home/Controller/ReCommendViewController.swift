@@ -87,7 +87,7 @@ extension ReCommendViewController {
         }
         
         //  2.请求轮播数据
-        recommendVM.requestrData { 
+        recommendVM.requestCycleData {
             self.cycleView.cycleModels = self.recommendVM.cycleModels
         }
     }

@@ -37,6 +37,8 @@
 		827998751E69619B00EB55C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827998731E69619B00EB55C6 /* LaunchScreen.storyboard */; };
 		827998801E69619B00EB55C6 /* DYDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8279987F1E69619B00EB55C6 /* DYDemoTests.swift */; };
 		8279988B1E69619B00EB55C6 /* DYDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8279988A1E69619B00EB55C6 /* DYDemoUITests.swift */; };
+		827BCEB51E8A6F91009706C8 /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BCEB31E8A6F91009706C8 /* CollectionCycleCell.swift */; };
+		827BCEB61E8A6F91009706C8 /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 827BCEB41E8A6F91009706C8 /* CollectionCycleCell.xib */; };
 		829F7B0E1E83DA8F009CACC1 /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F7B0D1E83DA8F009CACC1 /* RecommendCycleView.swift */; };
 		829F7B101E83DAA8009CACC1 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829F7B0F1E83DAA8009CACC1 /* RecommendCycleView.xib */; };
 		82D1C0D51E76A81F00218D0A /* ReCommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D1C0D41E76A81F00218D0A /* ReCommendViewController.swift */; };
@@ -105,6 +107,8 @@
 		827998861E69619B00EB55C6 /* DYDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DYDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8279988A1E69619B00EB55C6 /* DYDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYDemoUITests.swift; sourceTree = "<group>"; };
 		8279988C1E69619B00EB55C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		827BCEB31E8A6F91009706C8 /* CollectionCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
+		827BCEB41E8A6F91009706C8 /* CollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
 		829F7B0D1E83DA8F009CACC1 /* RecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		829F7B0F1E83DAA8009CACC1 /* RecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		82D1C0D41E76A81F00218D0A /* ReCommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReCommendViewController.swift; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 				826D75071E77F9240092DC1A /* CollectionHeaderView.xib */,
 				829F7B0D1E83DA8F009CACC1 /* RecommendCycleView.swift */,
 				829F7B0F1E83DAA8009CACC1 /* RecommendCycleView.xib */,
+				827BCEB31E8A6F91009706C8 /* CollectionCycleCell.swift */,
+				827BCEB41E8A6F91009706C8 /* CollectionCycleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -490,6 +496,7 @@
 				826D750D1E77FCA40092DC1A /* CollectionViewNormalCell.xib in Resources */,
 				825AD53F1E6BE03D009554C9 /* Home.storyboard in Resources */,
 				829F7B101E83DAA8009CACC1 /* RecommendCycleView.xib in Resources */,
+				827BCEB61E8A6F91009706C8 /* CollectionCycleCell.xib in Resources */,
 				826D75111E7801350092DC1A /* CollectionPrettyCell.xib in Resources */,
 				825AD5471E6BE1B0009554C9 /* Profile.storyboard in Resources */,
 				825AD5441E6BE160009554C9 /* Follow.storyboard in Resources */,
@@ -663,6 +670,7 @@
 				8248F4A01E7BB59500091C4B /* AnchorGroup.swift in Sources */,
 				82D1C0D51E76A81F00218D0A /* ReCommendViewController.swift in Sources */,
 				8248F49C1E7B801800091C4B /* ReCommendViewModel.swift in Sources */,
+				827BCEB51E8A6F91009706C8 /* CollectionCycleCell.swift in Sources */,
 				821B08741E893162006196DC /* CycleModel.swift in Sources */,
 				8279986B1E69619B00EB55C6 /* AppDelegate.swift in Sources */,
 				826D750C1E77FCA40092DC1A /* CollectionViewNormalCell.swift in Sources */,

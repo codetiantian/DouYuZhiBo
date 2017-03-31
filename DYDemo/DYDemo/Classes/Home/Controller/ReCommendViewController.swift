@@ -95,6 +95,8 @@ extension ReCommendViewController {
         //  1.请求推荐数据
         self.recommendVM.requestrData { 
             self.collectionView.reloadData()
+            
+            self.gameView.groups = self.recommendVM.anchorGroups
         }
         
         //  2.请求轮播数据

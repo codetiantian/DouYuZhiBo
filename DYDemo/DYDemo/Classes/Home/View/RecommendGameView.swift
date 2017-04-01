@@ -16,7 +16,6 @@ class RecommendGameView: UIView {
     //  MARK: 定义数据的属性
     var groups : [AnchorGroup]? {
         didSet {
-            
             //  刷新表格之前指出前两组数据
             groups?.remove(at: 0)
             groups?.remove(at: 0)

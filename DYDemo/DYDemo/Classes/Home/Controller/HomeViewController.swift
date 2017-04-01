@@ -48,9 +48,6 @@ class HomeViewController: UIViewController {
         
         setUpUI()
     }
-
-    
-
 }
 
 // MARK:设置UI界面

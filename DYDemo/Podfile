@@ -16,6 +16,8 @@ target 'DYDemo' do
     inherit! :search_paths
     # Pods for testing
   end
+  
+  inhibit_all_warnings!
 
   pod 'Alamofire'
   pod 'Kingfisher'
